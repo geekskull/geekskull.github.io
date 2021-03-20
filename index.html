@@ -1,12 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    <title>Mami</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeekSkull Studios</title>
+    <link rel="icon" href="assets/images/logo.ico" type="image/ico" sizes="16x16">
+    <link rel="stylesheet" href="node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="node_modules/jquery-modal/jquery.modal.css">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="assets/style/utils.css">
+    <link rel="stylesheet" href="assets/style/font.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/customizing.css">
 </head>
-<body>
-    
+
+<body class="dark" data-mcs-theme="minimal-dark">
+
+    <div id="particles-js" class="hide"></div>
+    <div class="wrapper" id="content">
+        <div class="content">
+          <img src="assets/images/logo.png" alt="" srcset="">
+            <h1 class="title">GeekSkull Studios</h1>
+            <p class="description">Este sitio se encuentras en construccion</p>
+            <button class="red space button" id="modalButon">CONTACT</button>
+        </div>
+        <ul class="social-media home">
+            <li>
+                <svg class="icon">
+				  			<use xlink:href="assets/images/Fb_Ro.svg#icon"></use>
+						</svg>
+                <li>
+                    <svg class="icon">
+				  			<use xlink:href="assets/images/Tw_Ro.svg#icon"></use>
+						</svg>
+                </li>
+                <li>
+                    <svg class="icon">
+				  			<use xlink:href="assets/images/In_Ro.svg#icon"></use>
+						</svg>
+                </li>
+                <li>
+                    <svg class="icon">
+				  			<use xlink:href="assets/images/Be_Ro.svg#icon"></use>
+						</svg>
+                </li>
+        </ul>
+    </div>
+    <div class="modal" id="modal" data-mcs-theme="minimal-dark">
+        <div class="modal-close" id="closeModalButton">
+            <svg class="closeIcon">
+				  	<use xlink:href="assets/images/close.svg#closeIcon"></use>
+				</svg>
+        </div>
+        <div class="modal-content row">
+            <div class="info six-sm four-md columns">
+                <h2 class="title">INFO</h2>
+                <p class="sub-title">SIMTO INC.</p>
+                <p class="content">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar</p>
+                <a href="tel:+380967003467" class="content">+380 96 700 3467</a>
+                <a href="mailto:octrace@gmail.com" class="content">octrace@gmail.com</a>
+
+                <ul class="social-media">
+                    <li>
+                        <svg class="icon">
+				  			<use xlink:href="assets/images/Fe_Ro2.svg#icon"></use>
+						</svg>
+                        <li>
+                            <svg class="icon">
+					  			<use xlink:href="assets/images/Tw_Ro2.svg#icon"></use>
+							</svg>
+                        </li>
+                        <li>
+                            <svg class="icon">
+					  			<use xlink:href="assets/images/In__Ro2.svg#icon"></use>
+							</svg>
+                        </li>
+                        <li>
+                            <svg class="icon">
+					  			<use xlink:href="assets/images/Be_Ro2.svg#icon"></use>
+							</svg>
+                        </li>
+                </ul>
+            </div>
+
+            <div class="form six-sm four-md columns">
+                <h2 class="title">CONTACT</h2>
+                <form name="form" action="#" novalidate>
+                    <div class="field">
+                        <input type="text" name="name" id="name" placeholder="NAME">
+                    </div>
+                    <div class="field">
+                        <input type="email" name="email" id="email" placeholder="E-MAIL">
+                    </div>
+                    <div class="field">
+                        <textarea name="message" id="message" placeholder="MESSAGE"></textarea>
+                    </div>
+                    <div class="field">
+                        <button type="submit">SEND</button>
+                    </div>
+                </form>
+                <p class="form-success-description">Your mail has been sent. Thanks for your message.</p>
+            </div>
+            <div class="map twelve-sm four-md columns">
+                <h2 class="title">MAP</h2>
+                <div id="map" style="width:100%;height:333px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="customizing_menu" id="customizing_menu">
+        <div class="head">
+            <p>CHANGE STYLE</p>
+            <img src="assets/images/close_menu.png" id="close_customizing_menu" alt="close-customizing-menu">
+        </div>
+        <ul class="styles">
+            <li>
+                <p>BUTON SHAPE</p>
+                <div class="variants">
+                    <div class="shape active"></div>
+                    <div class="shape rounded"></div>
+                    <div class="shape full-rounded"></div>
+                </div>
+            </li>
+            <li>
+                <p>BUTON COLOR</p>
+                <div class="variants">
+                    <div class="color red active"></div>
+                    <div class="color blue"></div>
+                    <div class="color orange"></div>
+                    <div class="color green"></div>
+                </div>
+            </li>
+            <li>
+                <p>DARK / LIGHT</p>
+                <div class="variants">
+                    <div class="theme dark active"></div>
+                    <div class="theme light"></div>
+                </div>
+            </li>
+            <li>
+                <p>PARTICLE</p>
+                <div class="variants">
+                    <div class="animation"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="customizing_button" id="customizing_button"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry&v=3.26&key=AIzaSyBavBqRqL-Af58n62NNOY6b65xiEY4Npao"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="node_modules/particles.js/particles.js"></script>
+    <script src="node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-validation.js"></script>
+    <script src="assets/js/customizing.js"></script>
 </body>
+
 </html>
