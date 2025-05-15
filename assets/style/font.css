@@ -1,0 +1,12 @@
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@font-face {
+    font-family: DINNextLTProMedium;
+    src: url('../fonts/din-next-lt-pro-medium-58f518e525f57.otf');
+}
+
+@font-face {
+    font-family: DINNextLTProLight;
+    src: url('../fonts/din-next-lt-pro-light-58f51b754a727.otf');
+}
